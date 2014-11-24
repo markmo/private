@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                    controllers.Application.index
+
+POST        /obfuscate           controllers.Application.obfuscate
+
+POST        /clarify             controllers.Application.clarify
+
+POST        /files/:tableName    controllers.Application.loadFile(tableName)
+
+POST        /execute             controllers.Application.execute
+
+POST        /query               controllers.Application.query
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.at(path="/public", file)
